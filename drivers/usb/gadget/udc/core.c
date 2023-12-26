@@ -1207,7 +1207,7 @@ static inline void usb_gadget_disable_async_callbacks(struct usb_udc *udc)
  * (if necessary) and resume issuing callbacks.
  *
  * This routine will always be called in process context.
- */
+
 static inline void usb_gadget_enable_async_callbacks(struct usb_udc *udc)
 {
 	struct usb_gadget *gadget = udc->gadget;
@@ -1215,7 +1215,7 @@ static inline void usb_gadget_enable_async_callbacks(struct usb_udc *udc)
 	if (gadget->ops->udc_async_callbacks)
 		gadget->ops->udc_async_callbacks(gadget, true);
 }
-
+ */
 /**
  * usb_gadget_disable_async_callbacks - tell usb device controller to disable asynchronous callbacks
  * @udc: The UDC which should disable async callbacks
@@ -1236,7 +1236,7 @@ static inline void usb_gadget_enable_async_callbacks(struct usb_udc *udc)
  * turned off during the time period when async callbacks are disabled.
  *
  * This routine will always be called in process context.
- */
+
 static inline void usb_gadget_disable_async_callbacks(struct usb_udc *udc)
 {
 	struct usb_gadget *gadget = udc->gadget;
@@ -1244,7 +1244,7 @@ static inline void usb_gadget_disable_async_callbacks(struct usb_udc *udc)
 	if (gadget->ops->udc_async_callbacks)
 		gadget->ops->udc_async_callbacks(gadget, false);
 }
-
+ */
 /**
  * usb_udc_release - release the usb_udc struct
  * @dev: the dev member within usb_udc
